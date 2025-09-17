@@ -1,9 +1,6 @@
 import * as fs from 'fs';
 import * as path from 'path';
-
-async function analyzeCV(pdfPath: string): Promise<any> {
-  throw new Error(`Function [${analyzeCV.name}] not implemented.`);
-}
+import { analyzeCV } from './analyzeCv.ts';
 
 async function main() {
   const cvDir = path.join(process.cwd(), 'cv');
@@ -14,7 +11,7 @@ async function main() {
   
   console.log(`Analyzing: ${cv}`);
   
-  const result = await analyzeCV(cvDir);
+  const result = await analyzeCV(`${cvDir}/${cv}`);
   
   console.log(`\nScore: ${result.score}/10`);
   console.log('\nFeedback:');
