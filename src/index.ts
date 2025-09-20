@@ -1,5 +1,6 @@
 import * as fs from 'fs';
 import * as path from 'path';
+import kleur from 'kleur';
 import { analyzeCV } from './analyzeCv.ts';
 
 async function main() {
@@ -9,13 +10,13 @@ async function main() {
   
   if (!validPdf) throw Error('No Curriculum found!');
   
-  console.log(`Analyzing: ${cv}`);
+  console.log(kleur.cyan('📄 Analyzing:'), kleur.white(cv));
   
   const result = await analyzeCV(`${cvDir}/${cv}`);
   
-  console.log(`\nScore: ${result.score}/10`);
-  console.log('\nFeedback:');
-  console.log(result.feedback);
+  console.log(kleur.green(`\n📊 Score:`), kleur.white(`${result.score}/10`));
+  console.log(kleur.yellow('\n💡 Feedback:'));
+  console.log(kleur.white(`   ${result.feedback}`));
 }
 
 main().catch((e) => {

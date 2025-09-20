@@ -14,6 +14,9 @@ importers:
       ai:
         specifier: ^5.0.44
         version: 5.0.44(zod@4.1.9)
+      kleur:
+        specifier: ^4.1.5
+        version: 4.1.5
       zod:
         specifier: ^4.1.9
         version: 4.1.9
@@ -69,6 +72,10 @@ packages:
   json-schema@0.4.0:
     resolution: {integrity: sha512-es94M3nTIfsEPisRafak+HDLfHXnKBhV3vU5eqPcS3flIWqcxJWgXHXiey3YrpaNsanY5ei1VoYEbOzijuq9BA==}
 
+  kleur@4.1.5:
+    resolution: {integrity: sha512-o+NO+8WrRiQEE4/7nwRJhN1HWpVmJm511pBHUxPLtp0BUISzlBplORYSmTclCnJvQq2tKu/sgl3xVpkc7ZWuQQ==}
+    engines: {node: '>=6'}
+
   undici-types@7.12.0:
     resolution: {integrity: sha512-goOacqME2GYyOZZfb5Lgtu+1IDmAlAEu5xnD3+xTzS10hT0vzpf0SPjkXwAw9Jm+4n/mQGDP3LO8CPbYROeBfQ==}
 
@@ -119,6 +126,8 @@ snapshots:
   eventsource-parser@3.0.6: {}
 
   json-schema@0.4.0: {}
+
+  kleur@4.1.5: {}
 
   undici-types@7.12.0: {}
 
